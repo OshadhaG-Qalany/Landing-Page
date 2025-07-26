@@ -36,3 +36,24 @@
         transform: rotate(360deg);
     }
 }
+
+
+.header-align {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.brand-main{
+    display: flex;
+    flex-direction: row;
+    /* row-gap: 2px; */
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo-name{
+    font-size: 40px;
+    color: #14213D;
+
+}
