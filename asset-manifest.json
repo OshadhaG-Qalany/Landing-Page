@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.64dcff7c.css",
-    "main.js": "/static/js/main.e22cedf0.js",
+    "main.css": "/static/css/main.97ed6af7.css",
+    "main.js": "/static/js/main.3a9aa8a4.js",
     "static/media/Tharindu2.png": "/static/media/Tharindu2.7e47ba8c0a8c00f42251.png",
     "static/media/Oshadha2.png": "/static/media/Oshadha2.a214b50ccc012d5d0178.png",
     "static/media/logo.png": "/static/media/logo.cb90d2504f4cee6b9888.png",
     "index.html": "/index.html",
-    "main.64dcff7c.css.map": "/static/css/main.64dcff7c.css.map",
-    "main.e22cedf0.js.map": "/static/js/main.e22cedf0.js.map"
+    "main.97ed6af7.css.map": "/static/css/main.97ed6af7.css.map",
+    "main.3a9aa8a4.js.map": "/static/js/main.3a9aa8a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.64dcff7c.css",
-    "static/js/main.e22cedf0.js"
+    "static/css/main.97ed6af7.css",
+    "static/js/main.3a9aa8a4.js"
   ]
 }
