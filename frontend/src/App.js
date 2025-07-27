@@ -510,7 +510,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
   ArrowRight, 
@@ -572,7 +572,7 @@ const NavigationHeader = () => {
                 isScrolled ? 'text-qalany-navy' : 'text-white'
               }`}>
                 <div className="brand-main">
-                <img style={{width:"4rem", height:"4rem"}} src={Logo}></img> <span style={{color:"#14213D"}} className="logo-name">Qal</span><span style={{color:"#FCA311"}} className="logo-name">any</span>
+                <img style={{width:"2.5rem", height:"2.5rem"}} src={Logo}></img> <span style={{color:"#14213D"}} className="logo-name">Qal</span><span style={{color:"#FCA311"}} className="logo-name">any</span>
                   </div>
 
                 </span>
@@ -594,29 +594,6 @@ const NavigationHeader = () => {
 const HeroSection = () => {
   return (
     <>
-      <style>
-        {`
-          .typing-effect {
-            overflow: hidden;
-            border-right: 0.15em solid orange; /* Cursor effect */
-            white-space: nowrap;
-            animation: typing 2s steps(12, end), blink 0.75s step-end infinite;
-            font-size: inherit;
-            line-height: 1.5;
-          }
-
-          @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-          }
-
-          @keyframes blink {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
-          }
-        `}
-      </style>
-
       <motion.section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0 }}
@@ -643,7 +620,7 @@ const HeroSection = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h1 style={{color:"#14213D"}} className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               Take Control of Your
               <span style={{ lineHeight: '1.5' }} className="block text-transparent bg-clip-text bg-gradient-to-r from-qalany-orange to-yellow-400">
                 Digital World
@@ -713,7 +690,7 @@ const founders = [
           <div className="w-24 h-1 bg-qalany-orange mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our mission is simple yet powerful: <strong className="text-qalany-navy">Helping you take control of your digital world.</strong> 
-            We envision a future where technology empowers you to live fully, making your digital world work seamlessly for you.
+            &nbsp;We envision a future where technology empowers you to live fully, making your digital world work seamlessly for you.
           </p>
         </motion.div>
 
@@ -788,11 +765,6 @@ const founders = [
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Shield,
-      title: "Digital Security",
-      description: "Advanced protection for your digital assets with enterprise-grade security measures."
-    },
-    {
       icon: Zap,
       title: "Instant Automation",
       description: "Streamline your workflow with intelligent automation that learns and adapts."
@@ -801,6 +773,11 @@ const FeaturesSection = () => {
       icon: Users,
       title: "Collaborative Control",
       description: "Seamlessly manage digital resources across teams with intuitive collaboration tools."
+    },
+    {
+      icon: Star,
+      title: "AI That Works for You",
+      description: "Our AI handles the busywork, but you call the shots - approve, tweak, and relax."
     }
   ];
 
@@ -849,7 +826,7 @@ const FeaturesSection = () => {
           ))}
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           className="mt-16 relative"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -858,11 +835,8 @@ const FeaturesSection = () => {
         >
           <div 
             className="rounded-3xl overflow-hidden shadow-premium h-64 bg-cover bg-center relative"
-            // style={{
-            //   backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`
-            // }}
           >
-            <div className="absolute inset-0 bg-qalany-navy bg-opacity-80 flex items-center justify-center">
+            <div style={{background: "linear-gradient(135deg, #14213D 0%, #1F2A52 50%, #3A4E7B 100%)"}} className="absolute inset-0 bg-opacity-80 flex items-center justify-center">
               <div className="text-center text-white">
                 <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Digital Experience?</h3>
                 <button className="bg-qalany-orange hover:bg-yellow-400 text-qalany-black font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
@@ -871,7 +845,7 @@ const FeaturesSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
@@ -967,7 +941,7 @@ const Footer = () => {
   return (
     <footer className="bg-qalany-black text-white">
       {/* Pre-footer CTA */}
-      <div className="bg-gradient-to-r from-qalany-navy to-qalany-black py-16">
+      <div style={{background: "linear-gradient(135deg, #14213D 0%, #1F2A52 50%, #3A4E7B 100%)"}} className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -1059,11 +1033,11 @@ const LandingPage = () => {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
